@@ -13,6 +13,6 @@ public class Test : CustomUpdater
     public override void Tick() 
     {
         count++;
-        Debug.Log(count);
+        Debug.Log("El gameplay se actualizó:" + count + "veces");
     } 
 }

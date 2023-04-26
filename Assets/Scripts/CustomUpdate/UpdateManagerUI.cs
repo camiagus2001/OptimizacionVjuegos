@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpdateManagerUI : MonoBehaviour
 {
     private List<CustomUpdater> uiUpdater;
+    private int interval = 2;
 
     public static UpdateManagerUI Instance { get; private set; }
 
@@ -23,12 +24,16 @@ public class UpdateManagerUI : MonoBehaviour
 
     private void Update()
     {
-        var count = uiUpdater.Count;
-
-        for (int i = 0; i < count; i++)
+        if(Time.frameCount % interval == 0)
         {
-            uiUpdater[i].Tick();
+            var count = uiUpdater.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                uiUpdater[i].Tick();
+            }
         }
+        
     }
 
     public void Add(CustomUpdater entity)
