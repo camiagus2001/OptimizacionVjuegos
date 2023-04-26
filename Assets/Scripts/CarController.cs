@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class CarController : CustomUpdater
 {
     [System.Serializable]
@@ -15,7 +13,7 @@ public class CarController : CustomUpdater
         public bool direction;
     }
   
-    private int count = 0;
+    //private int count = 0;
     public float maxAngulodeGiro;
     public float mySpeedMotorToque;
     public float speed;
@@ -28,7 +26,6 @@ public class CarController : CustomUpdater
         UpdateManagerGameplay.Instance.Add(this);
         car = GetComponent<Rigidbody>();
     }
-
    
     public override void Tick()
     {
@@ -52,9 +49,9 @@ public class CarController : CustomUpdater
             PosWheels(ejesInfo.ruedaDerecha);
         }
         
-
-        count++;
-        Debug.Log("El gameplay se actualizó:" + count + "veces");
+       // count++;
+       // Debug.Log("El gameplay se actualizó:" + count + "veces");
+       //Esto es para ver si de verdad se esta actualizando el debido tiempo
        
     }
 

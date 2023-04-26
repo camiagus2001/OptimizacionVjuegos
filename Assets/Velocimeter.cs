@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class Velocimeter : CustomUpdater
 {
-    private int count = 0;
+   // private int count = 0;
     public CarController CarController;
    
     [SerializeField] TextMeshProUGUI velocityText;
@@ -21,8 +20,9 @@ public class Velocimeter : CustomUpdater
         {
             velocityText.text = ((int)CarController.speed) + "Km/h";
         }
-     
-        count++;
-        Debug.Log("La ui se actualizó:" + count + "veces");
+
+        //count++;
+        // Debug.Log("La ui se actualizó:" + count + "veces");
+        //Esto es para ver si de verdad se esta actualizando el debido tiempo
     }
 }
