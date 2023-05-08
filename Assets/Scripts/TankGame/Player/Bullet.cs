@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public int damage = 10;
     public float lifetime = 2f;
 
-    private float age = 0f;
+    private float age;
 
     void Start()
     {
@@ -37,5 +37,9 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (other.gameObject.CompareTag("Perimeter"))
+        { 
+            Destroy(gameObject);
+        }
     }
 }
