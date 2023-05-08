@@ -6,9 +6,9 @@ public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
     [SerializeField] private int currentHealth;
-    public int rutine;
+    private int rutine;
     public float cooldown;
-    public Quaternion rotation;
+    private Quaternion rotation;
     public float angle;
     public float speed;
 
@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         MoveRandomly();
+        Cursor.visible = false;
     }
 
     public void TakeDamage(int damage)
