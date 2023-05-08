@@ -29,5 +29,13 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             Destroy(gameObject); 
         }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            Wall wall = other.gameObject.GetComponent<Wall>();
+            wall.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+
     }
 }

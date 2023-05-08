@@ -113,4 +113,3 @@ MonoBehaviour:
   speed: 10
   damage: 10
   lifetime: 2
-  m_ExplosionParticles: {fileID: 19807510, guid: 1911d89758d97cc4898d240e9e2545f4, type: 3}

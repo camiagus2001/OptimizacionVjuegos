@@ -5,12 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField] private int currentHealth;
 
     void Start()
     {
         currentHealth = maxHealth;
     }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -28,7 +29,6 @@ public class Enemy : MonoBehaviour
             explosion.transform.parent = null; // Detach the particle system from the enemy object
             explosion.Play(); // Play the particle system
         }
-
         Destroy(gameObject);
     }
 }
