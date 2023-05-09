@@ -20,9 +20,11 @@ public class Player : CustomUpdater
     public int cantidadTotalProyectiles;
 
     public GameObject bulletPrefab;
-    public Transform spawnTransform;
+    public Transform spawnBullet;
 
-    public int Respawn;
+    public Transform respawnPoint;
+
+    
 
     private void Awake()
     {
@@ -96,8 +98,8 @@ public class Player : CustomUpdater
 
         if (bullet != null && cantProyectiles > 0)
         {
-            bullet.transform.position = spawnTransform.transform.position;
-            bullet.transform.rotation = spawnTransform.transform.rotation;
+            bullet.transform.position = spawnBullet.transform.position;
+            bullet.transform.rotation = spawnBullet.transform.rotation;
             bullet.SetActive(true);
             cantProyectiles -= 1;
         }
@@ -122,7 +124,6 @@ public class Player : CustomUpdater
 
     void Die()
     {
-        SceneManager.LoadScene(Respawn); ;
-        Destroy(gameObject);
+        transform.position = respawnPoint.position;
     }
 }
