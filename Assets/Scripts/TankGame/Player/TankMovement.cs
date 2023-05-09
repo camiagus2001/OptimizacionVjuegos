@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TankMovement : MonoBehaviour //Agregar CustomUpdater 
+public class TankMovement : CustomUpdater 
 {
     public int m_PlayerNumber = 1;
     public float Speed = 5f;                 
@@ -12,24 +12,36 @@ public class TankMovement : MonoBehaviour //Agregar CustomUpdater
     private float m_MovementInputValue;        
     private float m_TurnInputValue;
 
+    public int cantProyectiles;
+    public int cantidadTotalProyectiles;
+
+    public GameObject bulletPrefab;
+
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
     }
     private void Start()
     {
-      // UpdateManagerGameplay.Instance.Add(this);
+       UpdateManagerGameplay.Instance.Add(this);
 
         m_MovementAxisName = "Vertical" + m_PlayerNumber;
         m_TurnAxisName = "Horizontal" + m_PlayerNumber;
     }
-    private void Update() //Tick
+    public override void Tick() 
     {
         m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
         m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
 
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            ShootBullet();
+        }
+
         Move();
         Turn();
+        Reload();
     }
 
     private void OnEnable()
@@ -61,7 +73,7 @@ public class TankMovement : MonoBehaviour //Agregar CustomUpdater
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
     }
 
-     void Turn()
+    void Turn()
     {       
         float turn = m_TurnInputValue * TurnSpeed * Time.deltaTime;
 
@@ -69,5 +81,26 @@ public class TankMovement : MonoBehaviour //Agregar CustomUpdater
         
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
     }
-   
+
+    public void ShootBullet()
+    {       
+        GameObject bullet = ObjectPool.instance.GetPooledObject();
+
+        if(bullet != null && cantProyectiles > 0 )
+        {
+            bullet.transform.position = transform.position;
+            bullet.transform.rotation = transform.rotation;
+            bullet.SetActive(true);
+            cantProyectiles -= 1;
+        }
+    }
+
+    public void Reload()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            cantProyectiles = cantidadTotalProyectiles;         
+        }
+    }
+
 }

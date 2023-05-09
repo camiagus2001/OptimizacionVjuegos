@@ -6,9 +6,7 @@ using UnityEngine;
 public class UIBullet : CustomUpdater
 {
     private float count;
-    public Gun gun;
-    public int cantProyectiles;
-    public int cantidadTotalProyectiles;
+    public TankMovement player;  
     public TextMeshProUGUI cantidadProjectilesText;
     public TextMeshProUGUI cantidadTotalProjectilesText;
     
@@ -22,7 +20,7 @@ public class UIBullet : CustomUpdater
         count++;
         Debug.Log("La ui se actualizó:" + count + "veces");
 
-        cantidadProjectilesText.text = gun.cantProyectiles.ToString();
-        cantidadTotalProjectilesText.text = gun.cantidadTotalProyectiles.ToString();
+        cantidadProjectilesText.text = player.cantProyectiles.ToString();
+        cantidadTotalProjectilesText.text = player.cantidadTotalProyectiles.ToString();
     }
 }
