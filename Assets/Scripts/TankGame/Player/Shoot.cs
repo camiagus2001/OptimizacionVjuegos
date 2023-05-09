@@ -8,14 +8,7 @@ public class Shoot : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ShootBullet();
-        }
     }
 
-    public void ShootBullet()
-    {
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
-    }
+   
 }

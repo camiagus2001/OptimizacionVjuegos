@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : CustomUpdater
 {
     public float speed = 10f;
     public int damage = 10;
@@ -10,13 +10,13 @@ public class Bullet : MonoBehaviour
 
     private float age;
 
-    void Start()
+    private void Start()
     {
-        Destroy(gameObject, lifetime); 
+        UpdateManagerGameplay.Instance.Add(this);
     }
-
-    void Update()
+   public override void Tick()
     {
+
         transform.Translate(Vector3.forward * speed * Time.deltaTime); 
         age += Time.deltaTime; 
     }
@@ -27,19 +27,22 @@ public class Bullet : MonoBehaviour
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(damage);
-            Destroy(gameObject); 
+           // Destroy(gameObject); 
+           gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Wall"))
         {
             Wall wall = other.gameObject.GetComponent<Wall>();
             wall.TakeDamage(damage);
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Perimeter"))
-        { 
-            Destroy(gameObject);
+        {
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
