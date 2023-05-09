@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     public float angle;
     public float speed;
 
+    public Transform spawnTransform;
+    public GameObject bulletPrefab;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -20,7 +23,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         MoveRandomly();
-        Cursor.visible = false;
+        Shoot();
     }
 
     public void TakeDamage(int damage)
@@ -65,6 +68,22 @@ public class Enemy : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
                 break;
+        }
+    }
+
+    private void Shoot()
+    {
+        cooldown += 1 * Time.deltaTime;
+        if (cooldown >= 1)
+        {
+            GameObject bullet = ObjectPool.instance.GetPooledObject();
+
+            if (bullet != null)
+            {
+                bullet.transform.position = spawnTransform.transform.position;
+                bullet.transform.rotation = spawnTransform.transform.rotation;
+                bullet.SetActive(true);
+            }
         }
     }
 

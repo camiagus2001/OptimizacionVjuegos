@@ -40,5 +40,12 @@ public class Bullet : CustomUpdater
         {
             gameObject.SetActive(false);
         }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.TakeDamage(damage);
+            gameObject.SetActive(false);
+        }
     }
 }
