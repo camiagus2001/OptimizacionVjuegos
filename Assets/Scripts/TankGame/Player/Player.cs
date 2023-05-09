@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class TankMovement : CustomUpdater 
+public class Player : CustomUpdater
 {
     public int m_PlayerNumber = 1;
-    public float Speed = 5f;                 
-    public float  TurnSpeed = 180f;
-              
-    private string m_MovementAxisName;          
-    private string m_TurnAxisName;              
-    private Rigidbody m_Rigidbody;             
-    private float m_MovementInputValue;        
+    public float Speed = 5f;
+    public float TurnSpeed = 180f;
+
+    private string m_MovementAxisName;
+    private string m_TurnAxisName;
+    private Rigidbody m_Rigidbody;
+    private float m_MovementInputValue;
     private float m_TurnInputValue;
 
     public int cantProyectiles;
@@ -23,12 +23,12 @@ public class TankMovement : CustomUpdater
     }
     private void Start()
     {
-       UpdateManagerGameplay.Instance.Add(this);
+        UpdateManagerGameplay.Instance.Add(this);
 
         m_MovementAxisName = "Vertical" + m_PlayerNumber;
         m_TurnAxisName = "Horizontal" + m_PlayerNumber;
     }
-    public override void Tick() 
+    public override void Tick()
     {
         m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
         m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
@@ -45,16 +45,16 @@ public class TankMovement : CustomUpdater
     }
 
     private void OnEnable()
-    {      
+    {
         m_Rigidbody.isKinematic = false;
-       
+
         m_MovementInputValue = 0f;
-        m_TurnInputValue = 0f;      
+        m_TurnInputValue = 0f;
     }
 
     private void OnDisable()
-    {       
-        m_Rigidbody.isKinematic = true;       
+    {
+        m_Rigidbody.isKinematic = true;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -67,26 +67,26 @@ public class TankMovement : CustomUpdater
     }
 
     void Move()
-    {      
+    {
         Vector3 movement = transform.forward * m_MovementInputValue * Speed * Time.deltaTime;
-      
+
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
     }
 
     void Turn()
-    {       
+    {
         float turn = m_TurnInputValue * TurnSpeed * Time.deltaTime;
 
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        
+
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
     }
 
     public void ShootBullet()
-    {       
+    {
         GameObject bullet = ObjectPool.instance.GetPooledObject();
 
-        if(bullet != null && cantProyectiles > 0 )
+        if (bullet != null && cantProyectiles > 0)
         {
             bullet.transform.position = transform.position;
             bullet.transform.rotation = transform.rotation;
@@ -99,8 +99,7 @@ public class TankMovement : CustomUpdater
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            cantProyectiles = cantidadTotalProyectiles;         
+            cantProyectiles = cantidadTotalProyectiles;
         }
     }
-
 }

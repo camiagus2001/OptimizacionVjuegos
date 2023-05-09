@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff6eb0319981dc45aec9831af06032c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2108134557}
+  player: {fileID: 2108134563}
   cantidadProjectilesText: {fileID: 177833363}
   cantidadTotalProjectilesText: {fileID: 1350988133}
 --- !u!114 &692177195
@@ -7097,49 +7097,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1345752103578228987, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3569162938320833512, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722609247579080411, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128271487663777781, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: cantProyectiles
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128271487663777781, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: cantidadTotalProyectiles
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152177644913295013, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7526937768347538432, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7576773645817006051, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7657218783737814139, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7657218783737814139, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8256735530480343893, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8293182484582722506, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_RootOrder
@@ -7184,10 +7144,6 @@ PrefabInstance:
     - target: {fileID: 8293182484582722506, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8702794162603147114, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
@@ -9903,15 +9859,15 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107578410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2108134557 stripped
+--- !u!114 &2108134563 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5128271487663777781, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5406337815074149149, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
   m_PrefabInstance: {fileID: 1672384133}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a005993b8499b440a605276627a16f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af0969d97bd025438f1771c27d18ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2111108537
