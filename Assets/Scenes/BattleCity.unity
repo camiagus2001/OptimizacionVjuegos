@@ -1359,6 +1359,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177833361}
   m_CullTransparentMesh: 1
+--- !u!1 &193024480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193024481}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193024481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193024480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.003, y: 0.355, z: -3.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257304357
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,10 +7129,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.003
       objectReference: {fileID: 0}
+    - target: {fileID: 4722609247579080411, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: m_Name
+      value: SpawnBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 5406337815074149149, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5406337815074149149, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: spawnBullet
+      value: 
+      objectReference: {fileID: 1205508155}
+    - target: {fileID: 5406337815074149149, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 193024481}
     - target: {fileID: 5406337815074149149, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: currentHealth
       value: 10
