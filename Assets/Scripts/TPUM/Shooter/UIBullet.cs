@@ -6,7 +6,7 @@ using UnityEngine;
 public class UIBullet : CustomUpdater
 {
     private float count;
-    public TankMovement player;  
+    public Player player;  
     public TextMeshProUGUI cantidadProjectilesText;
     public TextMeshProUGUI cantidadTotalProjectilesText;
     

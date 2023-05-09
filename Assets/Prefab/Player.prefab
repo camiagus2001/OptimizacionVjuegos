@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2704064255978807197}
   - component: {fileID: 3812366508183973395}
   - component: {fileID: 543330388054138879}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6841791313552921999}
   - component: {fileID: 6357328600691081687}
   - component: {fileID: 9011834185760314698}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1013938984935817994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 7546101352868190451}
   - component: {fileID: 107651517502761672}
   - component: {fileID: 3115139063446813322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8054035226237961572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 8586817212047852298}
   - component: {fileID: 8721890318771347401}
   - component: {fileID: 4327811351000980206}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,8 +412,8 @@ GameObject:
   - component: {fileID: 35952270480832480}
   - component: {fileID: 7243618571605527979}
   - component: {fileID: 63540192285281430}
-  - component: {fileID: 5128271487663777781}
-  m_Layer: 0
+  - component: {fileID: 5406337815074149149}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9107852, y: 1.247728, z: 2.6642036}
   m_Center: {x: 0.00000035762787, y: 0.002050817, z: -0.038929224}
---- !u!114 &5128271487663777781
+--- !u!114 &5406337815074149149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -525,12 +525,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7657218783737814139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a005993b8499b440a605276627a16f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af0969d97bd025438f1771c27d18ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerNumber: 1
   Speed: 2
-  TurnSpeed: 200
+  TurnSpeed: 180
+  cantProyectiles: 10
+  cantidadTotalProyectiles: 10
   bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
 --- !u!1 &8256735530480343893
 GameObject:
@@ -543,7 +545,7 @@ GameObject:
   - component: {fileID: 7095119722223933028}
   - component: {fileID: 7460453920681555320}
   - component: {fileID: 8725901746959406158}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +628,7 @@ GameObject:
   - component: {fileID: 5078146533298849730}
   - component: {fileID: 7696570457200085083}
   - component: {fileID: 2129851017447596265}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}

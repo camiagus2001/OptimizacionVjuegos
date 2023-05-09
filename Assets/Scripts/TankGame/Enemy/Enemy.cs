@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            TankMovement Player = collision.gameObject.GetComponent<TankMovement>();
+            Player Player = collision.gameObject.GetComponent<Player>();
             Die();
             Destroy(gameObject);
         }
