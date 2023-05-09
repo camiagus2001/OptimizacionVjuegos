@@ -44,8 +44,17 @@ public class TankMovement : MonoBehaviour //Agregar CustomUpdater
     {       
         m_Rigidbody.isKinematic = true;       
     }
-       
-     void Move()
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            Destroy(gameObject);
+        }
+    }
+
+    void Move()
     {      
         Vector3 movement = transform.forward * m_MovementInputValue * Speed * Time.deltaTime;
       

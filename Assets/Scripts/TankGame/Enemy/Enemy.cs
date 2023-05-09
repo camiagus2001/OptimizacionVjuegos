@@ -32,6 +32,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            TankMovement Player = collision.gameObject.GetComponent<TankMovement>();
+            Die();
+            Destroy(gameObject);
+        }
+    }
+
     public void MoveRandomly()
     {
         cooldown += 1 * Time.deltaTime;
