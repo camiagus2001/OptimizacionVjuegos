@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : CustomUpdater
 {
     public int m_PlayerNumber = 1;
     public float Speed = 5f;
     public float TurnSpeed = 180f;
+
+    public int maxHealth = 100;
+    [SerializeField] private int currentHealth;
 
     private string m_MovementAxisName;
     private string m_TurnAxisName;
@@ -16,10 +20,14 @@ public class Player : CustomUpdater
     public int cantidadTotalProyectiles;
 
     public GameObject bulletPrefab;
+    public Transform spawnTransform;
+
+    public int Respawn;
 
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        Cursor.visible = false;
     }
     private void Start()
     {
@@ -61,8 +69,8 @@ public class Player : CustomUpdater
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<Enemy>();
+            Die();
         }
     }
 
@@ -88,8 +96,8 @@ public class Player : CustomUpdater
 
         if (bullet != null && cantProyectiles > 0)
         {
-            bullet.transform.position = transform.position;
-            bullet.transform.rotation = transform.rotation;
+            bullet.transform.position = spawnTransform.transform.position;
+            bullet.transform.rotation = spawnTransform.transform.rotation;
             bullet.SetActive(true);
             cantProyectiles -= 1;
         }
@@ -101,5 +109,20 @@ public class Player : CustomUpdater
         {
             cantProyectiles = cantidadTotalProyectiles;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene(Respawn); ;
+        Destroy(gameObject);
     }
 }
