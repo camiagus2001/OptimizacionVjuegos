@@ -446,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 8374646595328360139}
   m_LocalRotation: {x: 0, y: 0.99974245, z: -0, w: -0.022695985}
   m_LocalPosition: {x: 1.4, y: 1.2361001, z: 15.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6341749984483337586}
@@ -553,7 +553,7 @@ MonoBehaviour:
   currentHealth: 100
   cooldown: 0
   angle: 360
-  speed: 3
+  speed: 1
 --- !u!1 &8601105784415839571
 GameObject:
   m_ObjectHideFlags: 0
