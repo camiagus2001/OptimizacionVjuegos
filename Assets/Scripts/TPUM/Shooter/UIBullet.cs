@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class UIBullet : CustomUpdater
 {
-    private float count;
     public Player player;  
     public TextMeshProUGUI cantidadProjectilesText;
     public TextMeshProUGUI cantidadTotalProjectilesText;
@@ -17,9 +16,6 @@ public class UIBullet : CustomUpdater
 
     public override void Tick()
     {
-        count++;
-        Debug.Log("La ui se actualizó:" + count + "veces");
-
         cantidadProjectilesText.text = player.cantProyectiles.ToString();
         cantidadTotalProjectilesText.text = player.cantidadTotalProyectiles.ToString();
     }

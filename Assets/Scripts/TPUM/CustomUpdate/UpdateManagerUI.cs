@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class UpdateManagerUI : MonoBehaviour
 {
+    [SerializeField] private float targetFps;
     private List<CustomUpdater> uiUpdater;
-    private int interval = 2;
+    private float timeToUpdate;
+    private float now = 0;
 
     public static UpdateManagerUI Instance { get; private set; }
 
@@ -22,9 +24,16 @@ public class UpdateManagerUI : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        timeToUpdate = 1 / targetFps;
+    }
+
     private void Update()
     {
-        if(Time.frameCount % interval == 0)
+        now += Time.deltaTime;
+
+        if (now >= timeToUpdate)
         {
             var count = uiUpdater.Count;
 
@@ -32,8 +41,9 @@ public class UpdateManagerUI : MonoBehaviour
             {
                 uiUpdater[i].Tick();
             }
+            now = 0;
         }
-        
+
     }
 
     public void Add(CustomUpdater entity)

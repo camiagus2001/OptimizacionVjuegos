@@ -4,42 +4,45 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool instance;
-
-    private List<GameObject> pooledObjects = new List<GameObject>();
     public int amountToPool;
+    [SerializeField] private GameObject objectPrefab;
+    private Queue<GameObject> pooledObjects = new Queue<GameObject>();
 
-    [SerializeField] private GameObject bulletPrefab;
 
-    private void Awake()
-    {
-        if(instance == null)
-        {
-            instance = this;
-        }
-    }
     void Start()
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject obj = Instantiate(bulletPrefab);
+            GameObject obj = Instantiate(objectPrefab);
             obj.SetActive(false);
-            pooledObjects.Add(obj);
+            pooledObjects.Enqueue(obj);
         }
+
     }
 
     public GameObject GetPooledObject()
     {
-        for (int i = 0; i < pooledObjects.Count; i++)
+        GameObject poolObject;
+
+        if(pooledObjects.Count > 0)
         {
-            if (!pooledObjects[i].activeInHierarchy)
-            {
-                return pooledObjects[i];
-            }
+            poolObject = pooledObjects.Dequeue();
+            poolObject.SetActive(true);
+            return poolObject;
+        }
+        else
+        {
+            poolObject = Instantiate(objectPrefab);
+            return poolObject;
         }
 
-        return null;
     }
 
+
+    public void ReturnToPool(GameObject poolObject)
+    {
+        poolObject.SetActive(false);
+        pooledObjects.Enqueue(poolObject);
+    }
    
 }

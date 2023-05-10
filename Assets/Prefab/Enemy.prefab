@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3346505574153136630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.789, z: 1.709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -582,12 +582,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currentHealth: 10
-  cooldown: 0
   angle: 360
   speed: 1
-  spawnTransform: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  movementDuration: 2
+  cooldown: 2
+  shootCooldown: 5
+  spawnTransform: {fileID: 6977732842580296425}
+  bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
+  enemyPoolReference: {fileID: 0}
 --- !u!1 &8601105784415839571
 GameObject:
   m_ObjectHideFlags: 0
