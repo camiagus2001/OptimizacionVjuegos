@@ -514,8 +514,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 2}
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Size: {x: 1.5, y: 1.7413509, z: 2}
+  m_Center: {x: 0, y: 0.32067537, z: 0}
 --- !u!114 &5406337815074149149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,11 +530,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   turnSpeed: 180
-  maxHealth: 100
-  cantProyectiles: 10
-  cantidadTotalProyectiles: 10
+  maxHealth: 10
   bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
-  spawnBullet: {fileID: 0}
+  spawnBullet: {fileID: 1013938984935817994}
   respawnPoint: {fileID: 0}
   projectilePoolReference: {fileID: 0}
 --- !u!1 &8256735530480343893

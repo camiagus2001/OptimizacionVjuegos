@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : CustomUpdater
 {
-    public int maxHealth = 100;
+    public int maxHealth;
     public float angle;
     public float speed;
     public float movementDuration;
@@ -111,12 +111,12 @@ public class Enemy : CustomUpdater
 
     void Die()
     {
-        //ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
-        //if (explosion != null)
-        //{
-        //    explosion.transform.parent = null;
-        //    explosion.Play(); 
-        //}
+        ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
+        if (explosion != null)
+        {
+            explosion.transform.parent = null;
+            explosion.Play(); 
+        }
         EnemyCounter.Instance.EnemyDie();
         rb.velocity = Vector3.zero;
         enemyPoolReference.ReturnToPool(gameObject);

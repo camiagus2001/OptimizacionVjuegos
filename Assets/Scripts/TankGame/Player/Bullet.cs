@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : CustomUpdater
 {
-    public float speed = 10f;
-    public int damage = 10;
-    public float lifetime = 2f;
+    public float speed;
+    public int damage;
+    public float lifetime;
     private float age;
     private ObjectPool poolReference;
 

@@ -3,11 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : CustomUpdater
 {
-    public float speed = 5f;
-    public float turnSpeed = 180f;
-    public int maxHealth = 100;
-    public int cantProyectiles;
-    public int cantidadTotalProyectiles;
+    public float speed;
+    public float turnSpeed;
+    public int maxHealth;
     public GameObject bulletPrefab;
     public Transform spawnBullet;
     public Transform respawnPoint;
@@ -30,7 +28,6 @@ public class Player : CustomUpdater
     {
         Move();
         Shoot();
-        Reload();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -72,7 +69,7 @@ public class Player : CustomUpdater
 
     public void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = projectilePoolReference.GetPooledObject();
             if(bullet != null)
@@ -80,14 +77,6 @@ public class Player : CustomUpdater
                 bullet.transform.position = spawnBullet.transform.position;
                 bullet.transform.rotation = spawnBullet.transform.rotation;
             }
-        }
-    }
-
-    public void Reload()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            cantProyectiles = cantidadTotalProyectiles;
         }
     }
 
