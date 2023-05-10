@@ -28,6 +28,7 @@ public class Enemy : CustomUpdater
         projectilePoolReference = projectilePool.GetComponent<ObjectPool>();
         GameObject enemyPool = GameObject.Find("EnemyPool");
         enemyPoolReference = enemyPool.GetComponent<ObjectPool>();
+        //caching de los pools y rb
     }
 
     public override void Tick()

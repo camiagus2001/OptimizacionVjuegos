@@ -26,7 +26,7 @@ public class UpdateManagerGameplay : MonoBehaviour
 
     private void Start()
     {
-        timeToUpdate = 1 / targetFps;
+        timeToUpdate = 1 / targetFps; //precomputation
     }
 
     private void Update()
