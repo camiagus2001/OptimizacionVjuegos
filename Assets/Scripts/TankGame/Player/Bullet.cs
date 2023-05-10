@@ -8,16 +8,20 @@ public class Bullet : CustomUpdater
     public int damage = 10;
     public float lifetime = 2f;
     private float age;
+    private ObjectPool poolReference;
 
     private void Start()
     {
         UpdateManagerGameplay.Instance.Add(this);
+        GameObject pojectilePool = GameObject.Find("ProyectilePool");
+        poolReference = pojectilePool.GetComponent<ObjectPool>();
     }
 
-   public override void Tick()
+
+
+    public override void Tick()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime); 
-        age += Time.deltaTime; 
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,26 +30,26 @@ public class Bullet : CustomUpdater
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(damage);
-            gameObject.SetActive(false);
+            poolReference.ReturnToPool(gameObject);
         }
 
         if (other.gameObject.CompareTag("Wall"))
         {
             Wall wall = other.gameObject.GetComponent<Wall>();
             wall.TakeDamage(damage);
-            gameObject.SetActive(false);
+            poolReference.ReturnToPool(gameObject);
         }
 
         if (other.gameObject.CompareTag("Perimeter"))
         {
-            gameObject.SetActive(false);
+            poolReference.ReturnToPool(gameObject);
         }
 
         if (other.gameObject.CompareTag("Player"))
         {
             Player player = other.gameObject.GetComponent<Player>();
             player.TakeDamage(damage);
-            gameObject.SetActive(false);
+            poolReference.ReturnToPool(gameObject);
         }
     }
 }

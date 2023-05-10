@@ -6,14 +6,15 @@ public class Player : CustomUpdater
     public float speed = 5f;
     public float turnSpeed = 180f;
     public int maxHealth = 100;
-    [SerializeField] private int currentHealth;
     public int cantProyectiles;
     public int cantidadTotalProyectiles;
     public GameObject bulletPrefab;
     public Transform spawnBullet;
     public Transform respawnPoint;
+    public ObjectPool projectilePoolReference;
+    private int currentHealth;
+    private Rigidbody rb;
 
-    
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class Player : CustomUpdater
     private void Start()
     {
         UpdateManagerGameplay.Instance.Add(this);
+        rb = GetComponent<Rigidbody>();
     }
 
     public override void Tick()
@@ -29,11 +31,6 @@ public class Player : CustomUpdater
         Move();
         Shoot();
         Reload();
-    }
-
-    public void Update()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -75,16 +72,13 @@ public class Player : CustomUpdater
 
     public void Shoot()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            GameObject bullet = ObjectPool.instance.GetPooledObject();
-
-            if (bullet != null && cantProyectiles > 0)
+            GameObject bullet = projectilePoolReference.GetPooledObject();
+            if(bullet != null)
             {
                 bullet.transform.position = spawnBullet.transform.position;
                 bullet.transform.rotation = spawnBullet.transform.rotation;
-                bullet.SetActive(true);
-                cantProyectiles -= 1;
             }
         }
     }
@@ -106,8 +100,9 @@ public class Player : CustomUpdater
         }
     }
 
-    void Die()
+    public void Die()
     {
+        rb.velocity = Vector3.zero;
         transform.position = respawnPoint.position;
     }
 }

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class UpdateManagerGameplay : MonoBehaviour
 {
+    [SerializeField] private float targetFps;
+    private float timeToUpdate;
+    private float now = 0;
     private List<CustomUpdater> gameplayUpdater;
 
     public static UpdateManagerGameplay Instance { get; private set; }
 
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Destroy(this);
         }
@@ -21,13 +24,24 @@ public class UpdateManagerGameplay : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        timeToUpdate = 1 / targetFps;
+    }
+
     private void Update()
     {
-        var count = gameplayUpdater.Count;
+        now += Time.deltaTime;
 
-        for (int i = 0; i < count; i++)
+        if (now >= timeToUpdate)
         {
-            gameplayUpdater[i].Tick();
+            var count = gameplayUpdater.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                gameplayUpdater[i].Tick();
+            }
+            now = 0;
         }
     }
 
