@@ -2,28 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : CustomUpdater
 {
     public int maxHealth = 100;
     [SerializeField] private int currentHealth;
-    private int rutine;
-    public float cooldown;
-    private Quaternion rotation;
     public float angle;
     public float speed;
-
+    public float movementDuration;
+    public float cooldown;
     public Transform spawnTransform;
     public GameObject bulletPrefab;
-
+    private Vector3 currentDirection;
+    private Quaternion targetRotation;
+    private Rigidbody rb;
+    
     void Start()
     {
+        UpdateManagerGameplay.Instance.Add(this);
+        rb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
+        
     }
 
-    private void Update()
+    public override void Tick()
     {
-        MoveRandomly();
-        Shoot();
+       Move();
+       Shoot();
     }
 
     public void TakeDamage(int damage)
@@ -39,42 +43,49 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player Player = collision.gameObject.GetComponent<Player>();
+            collision.gameObject.GetComponent<Player>();
             Die();
             Destroy(gameObject);
         }
     }
 
-    public void MoveRandomly()
+    private void Move()
     {
-        cooldown += 1 * Time.deltaTime;
-        if (cooldown >= 1) 
+        cooldown -= Time.deltaTime;
+
+        if (cooldown <= 0)
         {
-            rutine = Random.Range(0, 2);
-            cooldown = 0;
+            currentDirection = GetRandomDirection();
+            cooldown = movementDuration;
+            targetRotation = Quaternion.LookRotation(currentDirection);
         }
-        switch (rutine)
+
+        rb.MovePosition(rb.position + currentDirection * speed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
+    }
+
+    private Vector3 GetRandomDirection()
+    {
+        int randomInt = Random.Range(0, 4);
+        switch (randomInt)
         {
             case 0:
-                break;
-
+                return Vector3.forward;
             case 1:
-                angle = Random.Range(0, 360);
-                rotation = Quaternion.Euler(0, angle, 0);
-                rutine++;
-                break;
-
+                return Vector3.right;
             case 2:
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                break;
+                return Vector3.back;
+            case 3:
+                return Vector3.left;
+            default:
+                return Vector3.zero;
         }
     }
 
     private void Shoot()
     {
-        cooldown += 1 * Time.deltaTime;
-        if (cooldown >= 1)
+        cooldown -= Time.deltaTime;
+        if (cooldown <= 0)
         {
             GameObject bullet = ObjectPool.instance.GetPooledObject();
 

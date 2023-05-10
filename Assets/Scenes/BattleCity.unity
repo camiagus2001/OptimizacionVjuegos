@@ -2498,6 +2498,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
+      propertyPath: cooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
@@ -2505,6 +2513,14 @@ PrefabInstance:
       propertyPath: spawnTransform
       value: 
       objectReference: {fileID: 1701842887}
+    - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
+      propertyPath: movementDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
+      propertyPath: remainingMovementTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6977732842580296425, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -7161,6 +7177,10 @@ PrefabInstance:
       propertyPath: cantidadTotalProyectiles
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7243618571605527979, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7657218783737814139, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9968,7 +9988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3e995e21bdc75468ee7ab3d5679ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToPool: 30
+  amountToPool: 10
   bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
 --- !u!4 &2111108539
 Transform:
