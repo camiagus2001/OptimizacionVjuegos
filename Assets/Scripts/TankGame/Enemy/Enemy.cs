@@ -4,30 +4,39 @@ using UnityEngine;
 
 public class Enemy : CustomUpdater
 {
-    public int maxHealth = 100;
-    [SerializeField] private int currentHealth;
+    public int maxHealth;
     public float angle;
     public float speed;
     public float movementDuration;
     public float cooldown;
+    public float shootCooldown;
     public Transform spawnTransform;
-    public GameObject bulletPrefab;
+    public ObjectPool projectilePoolReference;
+    public ObjectPool enemyPoolReference;
+    private int currentHealth;
     private Vector3 currentDirection;
     private Quaternion targetRotation;
     private Rigidbody rb;
-    
+    private float currentShootCooldown;
+
+
+
     void Start()
     {
         UpdateManagerGameplay.Instance.Add(this);
         rb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
-        
+        GameObject projectilePool = GameObject.Find("ProyectilePool");
+        projectilePoolReference = projectilePool.GetComponent<ObjectPool>();
+        GameObject enemyPool = GameObject.Find("EnemyPool");
+        enemyPoolReference = enemyPool.GetComponent<ObjectPool>();
+
     }
 
     public override void Tick()
     {
-       Move();
-       Shoot();
+        Move();
+        Shoot();
     }
 
     public void TakeDamage(int damage)
@@ -43,9 +52,11 @@ public class Enemy : CustomUpdater
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>();
+            Die();    
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
             Die();
-            Destroy(gameObject);
         }
     }
 
@@ -84,17 +95,17 @@ public class Enemy : CustomUpdater
 
     private void Shoot()
     {
-        cooldown -= Time.deltaTime;
-        if (cooldown <= 0)
+        currentShootCooldown -= Time.deltaTime;
+        if (currentShootCooldown <= 0)
         {
-            GameObject bullet = ObjectPool.instance.GetPooledObject();
+            GameObject bullet = projectilePoolReference.GetPooledObject();
 
             if (bullet != null)
             {
                 bullet.transform.position = spawnTransform.transform.position;
                 bullet.transform.rotation = spawnTransform.transform.rotation;
-                bullet.SetActive(true);
             }
+            currentShootCooldown = shootCooldown;
         }
     }
 
@@ -106,6 +117,8 @@ public class Enemy : CustomUpdater
             explosion.transform.parent = null;
             explosion.Play(); 
         }
-        Destroy(gameObject);
+        EnemyCounter.Instance.EnemyDie();
+        rb.velocity = Vector3.zero;
+        enemyPoolReference.ReturnToPool(gameObject);
     }
 }
