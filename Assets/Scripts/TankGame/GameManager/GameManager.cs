@@ -15,11 +15,7 @@ public class GameManager : MonoBehaviour
         UI = GameObject.FindGameObjectWithTag("UIController");
         player = GameObject.FindGameObjectWithTag("Player");
         UnPauseGame();
-    }
-    void Update()
-    {
-        
-    }
+    } 
     public void PauseGame()
     {
         Time.timeScale = 0f;

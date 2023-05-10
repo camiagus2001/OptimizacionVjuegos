@@ -20,7 +20,5 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Se cerro el juego");
         Application.Quit();
-    }
-    
-
+    }    
 }
