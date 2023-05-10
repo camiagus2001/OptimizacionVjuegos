@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 95674927}
   - component: {fileID: 95674926}
   - component: {fileID: 95674925}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 103964275}
   - component: {fileID: 103964274}
   - component: {fileID: 103964273}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 136339282}
   - component: {fileID: 136339281}
   - component: {fileID: 136339280}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 166410310}
   - component: {fileID: 166410309}
   - component: {fileID: 166410308}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 257304361}
   - component: {fileID: 257304360}
   - component: {fileID: 257304359}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 309324623}
   - component: {fileID: 309324622}
   - component: {fileID: 309324621}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 344239470}
   - component: {fileID: 344239469}
   - component: {fileID: 344239468}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -2016,7 +2016,7 @@ GameObject:
   - component: {fileID: 411874319}
   - component: {fileID: 411874318}
   - component: {fileID: 411874317}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -2466,6 +2466,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714607357, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 925011673505135179, guid: 0fe8759f13fb8284ead10d97ebd68872, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -2569,7 +2573,7 @@ GameObject:
   - component: {fileID: 534697118}
   - component: {fileID: 534697117}
   - component: {fileID: 534697116}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -2960,7 +2964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff6eb0319981dc45aec9831af06032c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2108134557}
+  player: {fileID: 2108134563}
   cantidadProjectilesText: {fileID: 177833363}
   cantidadTotalProjectilesText: {fileID: 1350988133}
 --- !u!114 &692177195
@@ -3060,7 +3064,7 @@ GameObject:
   - component: {fileID: 714225000}
   - component: {fileID: 714224999}
   - component: {fileID: 714224998}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -3174,7 +3178,7 @@ GameObject:
   - component: {fileID: 745343895}
   - component: {fileID: 745343894}
   - component: {fileID: 745343893}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -3288,7 +3292,7 @@ GameObject:
   - component: {fileID: 797344655}
   - component: {fileID: 797344654}
   - component: {fileID: 797344653}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -3537,7 +3541,7 @@ GameObject:
   - component: {fileID: 818745384}
   - component: {fileID: 818745383}
   - component: {fileID: 818745382}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -3651,7 +3655,7 @@ GameObject:
   - component: {fileID: 846395877}
   - component: {fileID: 846395876}
   - component: {fileID: 846395875}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -3765,7 +3769,7 @@ GameObject:
   - component: {fileID: 859775881}
   - component: {fileID: 859775880}
   - component: {fileID: 859775879}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4102,7 +4106,7 @@ GameObject:
   - component: {fileID: 938232898}
   - component: {fileID: 938232897}
   - component: {fileID: 938232896}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4216,7 +4220,7 @@ GameObject:
   - component: {fileID: 984218752}
   - component: {fileID: 984218751}
   - component: {fileID: 984218750}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4330,7 +4334,7 @@ GameObject:
   - component: {fileID: 1076419845}
   - component: {fileID: 1076419844}
   - component: {fileID: 1076419843}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4702,7 +4706,7 @@ GameObject:
   - component: {fileID: 1170153029}
   - component: {fileID: 1170153028}
   - component: {fileID: 1170153027}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4816,7 +4820,7 @@ GameObject:
   - component: {fileID: 1173607393}
   - component: {fileID: 1173607392}
   - component: {fileID: 1173607391}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -4930,7 +4934,7 @@ GameObject:
   - component: {fileID: 1181549288}
   - component: {fileID: 1181549287}
   - component: {fileID: 1181549286}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -5044,7 +5048,7 @@ GameObject:
   - component: {fileID: 1189487103}
   - component: {fileID: 1189487102}
   - component: {fileID: 1189487101}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -5662,7 +5666,7 @@ GameObject:
   - component: {fileID: 1293840048}
   - component: {fileID: 1293840047}
   - component: {fileID: 1293840046}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -5776,7 +5780,7 @@ GameObject:
   - component: {fileID: 1306051597}
   - component: {fileID: 1306051596}
   - component: {fileID: 1306051595}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -6019,7 +6023,7 @@ GameObject:
   - component: {fileID: 1336094540}
   - component: {fileID: 1336094539}
   - component: {fileID: 1336094538}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -6465,7 +6469,7 @@ GameObject:
   - component: {fileID: 1457981769}
   - component: {fileID: 1457981768}
   - component: {fileID: 1457981767}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -6837,7 +6841,7 @@ GameObject:
   - component: {fileID: 1622412636}
   - component: {fileID: 1622412635}
   - component: {fileID: 1622412634}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -7089,6 +7093,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 63540192285281430, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1345752103578228987, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -7112,6 +7120,34 @@ PrefabInstance:
     - target: {fileID: 6152177644913295013, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825593924883068085, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: Speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825593924883068085, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
+    - target: {fileID: 6825593924883068085, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: cantProyectiles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825593924883068085, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: cantidadTotalProyectiles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243618571605527979, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243618571605527979, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489061201428638152, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+      propertyPath: moveSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7526937768347538432, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
       propertyPath: m_Layer
@@ -7181,7 +7217,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6872280967188420154, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+    - {fileID: 7489061201428638152, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
 --- !u!1 &1706072340
 GameObject:
@@ -7196,7 +7234,7 @@ GameObject:
   - component: {fileID: 1706072344}
   - component: {fileID: 1706072343}
   - component: {fileID: 1706072342}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -7439,7 +7477,7 @@ GameObject:
   - component: {fileID: 1712182437}
   - component: {fileID: 1712182436}
   - component: {fileID: 1712182435}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -7553,7 +7591,7 @@ GameObject:
   - component: {fileID: 1730721055}
   - component: {fileID: 1730721054}
   - component: {fileID: 1730721053}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -7796,7 +7834,7 @@ GameObject:
   - component: {fileID: 1745449736}
   - component: {fileID: 1745449735}
   - component: {fileID: 1745449734}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8039,7 +8077,7 @@ GameObject:
   - component: {fileID: 1748136421}
   - component: {fileID: 1748136420}
   - component: {fileID: 1748136419}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8153,7 +8191,7 @@ GameObject:
   - component: {fileID: 1779186612}
   - component: {fileID: 1779186611}
   - component: {fileID: 1779186610}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8396,7 +8434,7 @@ GameObject:
   - component: {fileID: 1859087317}
   - component: {fileID: 1859087316}
   - component: {fileID: 1859087315}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8510,7 +8548,7 @@ GameObject:
   - component: {fileID: 1864445209}
   - component: {fileID: 1864445208}
   - component: {fileID: 1864445207}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8624,7 +8662,7 @@ GameObject:
   - component: {fileID: 1881708265}
   - component: {fileID: 1881708264}
   - component: {fileID: 1881708263}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8738,7 +8776,7 @@ GameObject:
   - component: {fileID: 1913019430}
   - component: {fileID: 1913019429}
   - component: {fileID: 1913019428}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -8852,7 +8890,7 @@ GameObject:
   - component: {fileID: 1915613859}
   - component: {fileID: 1915613858}
   - component: {fileID: 1915613857}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9095,7 +9133,7 @@ GameObject:
   - component: {fileID: 1938401878}
   - component: {fileID: 1938401877}
   - component: {fileID: 1938401876}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9209,7 +9247,7 @@ GameObject:
   - component: {fileID: 1950837944}
   - component: {fileID: 1950837943}
   - component: {fileID: 1950837942}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9452,7 +9490,7 @@ GameObject:
   - component: {fileID: 2022243489}
   - component: {fileID: 2022243488}
   - component: {fileID: 2022243487}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9566,7 +9604,7 @@ GameObject:
   - component: {fileID: 2033534552}
   - component: {fileID: 2033534551}
   - component: {fileID: 2033534550}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9680,7 +9718,7 @@ GameObject:
   - component: {fileID: 2098241907}
   - component: {fileID: 2098241906}
   - component: {fileID: 2098241905}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9794,7 +9832,7 @@ GameObject:
   - component: {fileID: 2107578414}
   - component: {fileID: 2107578413}
   - component: {fileID: 2107578412}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Perimeter
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
@@ -9895,9 +9933,9 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107578410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2108134557 stripped
+--- !u!114 &2108134563 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5128271487663777781, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6825593924883068085, guid: 54880e9a7a149f744b8c3ebfdfd2f79d, type: 3}
   m_PrefabInstance: {fileID: 1672384133}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

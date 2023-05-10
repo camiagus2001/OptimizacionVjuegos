@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Floor
   - Perimeter
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Floor
   - Perimeter
   - Enemy
-  - 
+  - Obstacle
   - 
   - 
   - 
