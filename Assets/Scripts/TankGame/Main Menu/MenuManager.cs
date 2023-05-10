@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     public void HomeButton()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
     public void TutorialButton()
     {
