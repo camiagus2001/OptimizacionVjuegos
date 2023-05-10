@@ -24,7 +24,7 @@ public class EnemySpawner : CustomUpdater
         if(timer <= 0)
         {
             var enemyObject = poolReference.GetPooledObject();
-            var randomSpawn = Random.Range(0,5);
+            var randomSpawn = Random.Range(0,spawnPoints.Length);
             enemyObject.transform.position = spawnPoints[randomSpawn].position;
             timer = timerSet;
         }

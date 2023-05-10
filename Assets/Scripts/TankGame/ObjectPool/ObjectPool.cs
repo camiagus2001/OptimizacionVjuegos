@@ -8,6 +8,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private GameObject objectPrefab;
     private Queue<GameObject> pooledObjects = new Queue<GameObject>();
 
+    public int PoolCount { get => pooledObjects.Count; }
 
     void Start()
     {
@@ -33,7 +34,6 @@ public class ObjectPool : MonoBehaviour
         else
         {
             poolObject = Instantiate(objectPrefab);
-            pooledObjects.Enqueue(poolObject);
             return poolObject;
         }
 

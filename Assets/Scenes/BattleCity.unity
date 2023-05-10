@@ -786,7 +786,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &95674924
 Transform:
@@ -900,7 +900,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &103964272
 Transform:
@@ -1014,7 +1014,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &136339279
 Transform:
@@ -1128,7 +1128,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &166410307
 Transform:
@@ -1318,7 +1318,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &257304358
 Transform:
@@ -1432,7 +1432,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &309324620
 Transform:
@@ -1804,7 +1804,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &344239467
 Transform:
@@ -1963,7 +1963,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &411874316
 Transform:
@@ -2419,7 +2419,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &534697115
 Transform:
@@ -2906,7 +2906,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &714224997
 Transform:
@@ -3020,7 +3020,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &745343892
 Transform:
@@ -3134,7 +3134,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &797344652
 Transform:
@@ -3248,7 +3248,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &818745381
 Transform:
@@ -3362,7 +3362,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &846395874
 Transform:
@@ -3476,7 +3476,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &859775878
 Transform:
@@ -3813,7 +3813,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &938232895
 Transform:
@@ -3973,7 +3973,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &984218749
 Transform:
@@ -4087,7 +4087,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1076419842
 Transform:
@@ -4459,7 +4459,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1170153026
 Transform:
@@ -4573,7 +4573,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1173607390
 Transform:
@@ -4723,7 +4723,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1181549285
 Transform:
@@ -4837,7 +4837,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1189487100
 Transform:
@@ -5461,7 +5461,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1293840045
 Transform:
@@ -5575,7 +5575,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1306051594
 Transform:
@@ -5818,7 +5818,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1336094537
 Transform:
@@ -6377,7 +6377,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1457981766
 Transform:
@@ -6811,7 +6811,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1622412633
 Transform:
@@ -7174,7 +7174,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1706072341
 Transform:
@@ -7417,7 +7417,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1712182434
 Transform:
@@ -7531,7 +7531,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1730721052
 Transform:
@@ -7774,7 +7774,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1745449733
 Transform:
@@ -8017,7 +8017,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1748136418
 Transform:
@@ -8131,7 +8131,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1779186609
 Transform:
@@ -8405,7 +8405,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1859087314
 Transform:
@@ -8519,7 +8519,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1864445206
 Transform:
@@ -8633,7 +8633,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1881708262
 Transform:
@@ -8747,7 +8747,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1913019427
 Transform:
@@ -8861,7 +8861,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1915613856
 Transform:
@@ -9104,7 +9104,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1938401875
 Transform:
@@ -9218,7 +9218,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1950837941
 Transform:
@@ -9461,7 +9461,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2022243486
 Transform:
@@ -9575,7 +9575,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2033534549
 Transform:
@@ -9689,7 +9689,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2098241904
 Transform:
@@ -9803,7 +9803,7 @@ GameObject:
   m_TagString: Perimeter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2107578411
 Transform:
