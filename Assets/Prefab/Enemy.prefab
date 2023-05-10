@@ -551,8 +551,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9107858, y: 1.5601168, z: 2.6642046}
-  m_Center: {x: 0.00000037261896, y: 0.28005785, z: -0.038929284}
+  m_Size: {x: 1.5, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!54 &2873730440709777458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -584,11 +584,10 @@ MonoBehaviour:
   maxHealth: 10
   angle: 360
   speed: 1
-  movementDuration: 2
-  cooldown: 2
-  shootCooldown: 5
+  movementDuration: 3
+  cooldown: 1
+  shootCooldown: 2
   spawnTransform: {fileID: 6977732842580296425}
-  bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
   enemyPoolReference: {fileID: 0}
 --- !u!1 &8601105784415839571
 GameObject:

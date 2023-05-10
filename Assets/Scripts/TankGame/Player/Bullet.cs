@@ -17,11 +17,7 @@ public class Bullet : CustomUpdater
         poolReference = pojectilePool.GetComponent<ObjectPool>();
     }
 
-    public void InitializeBullet(Transform spawnBullet)
-    {
-        transform.position = spawnBullet.transform.position;
-        transform.rotation = spawnBullet.transform.rotation;
-    }
+
 
     public override void Tick()
     {

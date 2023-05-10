@@ -13,8 +13,8 @@ public class Player : CustomUpdater
     public Transform respawnPoint;
     public ObjectPool projectilePoolReference;
     private int currentHealth;
+    private Rigidbody rb;
 
-    
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class Player : CustomUpdater
     private void Start()
     {
         UpdateManagerGameplay.Instance.Add(this);
+        rb = GetComponent<Rigidbody>();
     }
 
     public override void Tick()
@@ -74,7 +75,11 @@ public class Player : CustomUpdater
         if (Input.GetKeyDown(KeyCode.J))
         {
             GameObject bullet = projectilePoolReference.GetPooledObject();
-            bullet.GetComponent<Bullet>().InitializeBullet(spawnBullet);
+            if(bullet != null)
+            {
+                bullet.transform.position = spawnBullet.transform.position;
+                bullet.transform.rotation = spawnBullet.transform.rotation;
+            }
         }
     }
 
@@ -97,6 +102,7 @@ public class Player : CustomUpdater
 
     public void Die()
     {
+        rb.velocity = Vector3.zero;
         transform.position = respawnPoint.position;
     }
 }

@@ -11,7 +11,6 @@ public class Enemy : CustomUpdater
     public float cooldown;
     public float shootCooldown;
     public Transform spawnTransform;
-    public GameObject bulletPrefab;
     public ObjectPool enemyPoolReference;
     private int currentHealth;
     private Vector3 currentDirection;
@@ -38,13 +37,6 @@ public class Enemy : CustomUpdater
         Shoot();
     }
 
-    public void InitializeEnemy(Transform spawnEnemy)
-    {
-        transform.position = spawnEnemy.transform.position;
-        transform.rotation = spawnEnemy.transform.rotation;
-        currentHealth = maxHealth;
-    }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -60,6 +52,10 @@ public class Enemy : CustomUpdater
         {
             collision.gameObject.GetComponent<Player>();
             Die();    
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Die();
         }
     }
 
@@ -114,13 +110,14 @@ public class Enemy : CustomUpdater
 
     void Die()
     {
-        ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
-        if (explosion != null)
-        {
-            explosion.transform.parent = null;
-            explosion.Play(); 
-        }
+        //ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
+        //if (explosion != null)
+        //{
+        //    explosion.transform.parent = null;
+        //    explosion.Play(); 
+        //}
         EnemyCounter.Instance.EnemyDie();
+        rb.velocity = Vector3.zero;
         enemyPoolReference.ReturnToPool(gameObject);
     }
 }
