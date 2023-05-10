@@ -33,6 +33,7 @@ public class ObjectPool : MonoBehaviour
         else
         {
             poolObject = Instantiate(objectPrefab);
+            pooledObjects.Enqueue(poolObject);
             return poolObject;
         }
 

@@ -1929,7 +1929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e710648c972d694aa6a0651000cfddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFps: 60
+  targetFps: 120
 --- !u!4 &369001750
 Transform:
   m_ObjectHideFlags: 0
@@ -6358,7 +6358,7 @@ MonoBehaviour:
   - {fileID: 1808129209}
   - {fileID: 1583705240}
   - {fileID: 1587274916}
-  timer: 1
+  timer: 2
 --- !u!1 &1457981765
 GameObject:
   m_ObjectHideFlags: 0

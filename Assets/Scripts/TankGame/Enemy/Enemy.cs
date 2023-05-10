@@ -11,6 +11,7 @@ public class Enemy : CustomUpdater
     public float cooldown;
     public float shootCooldown;
     public Transform spawnTransform;
+    public ObjectPool projectilePoolReference;
     public ObjectPool enemyPoolReference;
     private int currentHealth;
     private Vector3 currentDirection;
@@ -25,9 +26,10 @@ public class Enemy : CustomUpdater
         UpdateManagerGameplay.Instance.Add(this);
         rb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
-        GameObject enemyPool = GameObject.Find("ProyectilePool");
+        GameObject projectilePool = GameObject.Find("ProyectilePool");
+        projectilePoolReference = projectilePool.GetComponent<ObjectPool>();
+        GameObject enemyPool = GameObject.Find("EnemyPool");
         enemyPoolReference = enemyPool.GetComponent<ObjectPool>();
-        
 
     }
 
@@ -50,7 +52,6 @@ public class Enemy : CustomUpdater
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>();
             Die();    
         }
         if (collision.gameObject.CompareTag("Enemy"))
@@ -97,7 +98,7 @@ public class Enemy : CustomUpdater
         currentShootCooldown -= Time.deltaTime;
         if (currentShootCooldown <= 0)
         {
-            GameObject bullet = enemyPoolReference.GetPooledObject();
+            GameObject bullet = projectilePoolReference.GetPooledObject();
 
             if (bullet != null)
             {
