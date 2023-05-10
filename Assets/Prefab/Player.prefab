@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 35952270480832480}
   - component: {fileID: 7243618571605527979}
   - component: {fileID: 63540192285281430}
-  - component: {fileID: 5128271487663777781}
+  - component: {fileID: 6825593924883068085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -510,13 +510,13 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7657218783737814139}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8c13b5fe614205746b6786737a6a7bca, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.9107852, y: 1.247728, z: 2.6642036}
   m_Center: {x: 0.00000035762787, y: 0.002050817, z: -0.038929224}
---- !u!114 &5128271487663777781
+--- !u!114 &6825593924883068085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,10 +528,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a005993b8499b440a605276627a16f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
-  Speed: 2
-  TurnSpeed: 200
-  bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
+  Speed: 5
+  cantProyectiles: 0
+  cantidadTotalProyectiles: 0
+  bulletPrefab: {fileID: 0}
 --- !u!1 &8256735530480343893
 GameObject:
   m_ObjectHideFlags: 0

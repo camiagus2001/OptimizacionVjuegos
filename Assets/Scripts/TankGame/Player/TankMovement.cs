@@ -1,16 +1,10 @@
 using UnityEngine;
 
 public class TankMovement : CustomUpdater 
-{
-    public int m_PlayerNumber = 1;
+{   
     public float Speed = 5f;                 
-    public float  TurnSpeed = 180f;
-              
-    private string m_MovementAxisName;          
-    private string m_TurnAxisName;              
-    private Rigidbody m_Rigidbody;             
-    private float m_MovementInputValue;        
-    private float m_TurnInputValue;
+   
+    private Rigidbody m_Rigidbody;
 
     public int cantProyectiles;
     public int cantidadTotalProyectiles;
@@ -25,31 +19,45 @@ public class TankMovement : CustomUpdater
     {
        UpdateManagerGameplay.Instance.Add(this);
 
-        m_MovementAxisName = "Vertical" + m_PlayerNumber;
-        m_TurnAxisName = "Horizontal" + m_PlayerNumber;
     }
     public override void Tick() 
     {
-        m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
-        m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
+        float horizontalInput = Input.GetAxisRaw("Horizontal1");
+        float verticalInput = Input.GetAxisRaw("Vertical1");
 
+        if (horizontalInput != 0 && verticalInput != 0)
+        {
+            if (Mathf.Abs(horizontalInput) > Mathf.Abs(verticalInput))
+            {
+                verticalInput = 0;
+            }
+            else
+            {
+                horizontalInput = 0;
+            }
+        }
+
+        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
+        movement = movement.normalized;
+
+        transform.position += movement * Speed * Time.deltaTime;
+
+        if (movement != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
             ShootBullet();
         }
-
-        Move();
-        Turn();
+        
         Reload();
     }
 
     private void OnEnable()
     {      
-        m_Rigidbody.isKinematic = false;
-       
-        m_MovementInputValue = 0f;
-        m_TurnInputValue = 0f;      
+        m_Rigidbody.isKinematic = false;         
     }
 
     private void OnDisable()
@@ -64,28 +72,18 @@ public class TankMovement : CustomUpdater
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Wall")) 
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero; 
+        }
     }
-
-    void Move()
-    {      
-        Vector3 movement = transform.forward * m_MovementInputValue * Speed * Time.deltaTime;
-      
-        m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
-    }
-
-    void Turn()
-    {       
-        float turn = m_TurnInputValue * TurnSpeed * Time.deltaTime;
-
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        
-        m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
-    }
-
+ 
     public void ShootBullet()
     {       
+        
         GameObject bullet = ObjectPool.instance.GetPooledObject();
-
+            
         if(bullet != null && cantProyectiles > 0 )
         {
             bullet.transform.position = transform.position;

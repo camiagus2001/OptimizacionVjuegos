@@ -6,23 +6,67 @@ public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
     [SerializeField] private int currentHealth;
-    private int rutine;
+   
     public float cooldown;
-    private Quaternion rotation;
     public float angle;
     public float speed;
+
+    public float moveSpeed = 5f;
+    public float movementDuration = 2f;
+
+    private Rigidbody rb;
+    private Vector3 currentDirection;
+    private float remainingMovementTime;
+    private Quaternion targetRotation;
 
     void Start()
     {
         currentHealth = maxHealth;
+
+        rb = GetComponent<Rigidbody>();
+        currentDirection = GetRandomDirection();
+        remainingMovementTime = movementDuration;
+        targetRotation = transform.rotation;
     }
 
     private void Update()
-    {
-        MoveRandomly();
+    {      
         Cursor.visible = false;
     }
 
+   
+    private void FixedUpdate()
+    {
+        remainingMovementTime -= Time.fixedDeltaTime;
+
+        if (remainingMovementTime <= 0)
+        {
+            currentDirection = GetRandomDirection();
+            remainingMovementTime = movementDuration;
+            targetRotation = Quaternion.LookRotation(currentDirection);
+        }
+
+        rb.MovePosition(rb.position + currentDirection * moveSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
+    }
+
+    private Vector3 GetRandomDirection()
+    {
+        int randomInt = Random.Range(0, 4);
+        switch (randomInt)
+        {
+            case 0:
+                return Vector3.forward;
+            case 1:
+                return Vector3.right;
+            case 2:
+                return Vector3.back;
+            case 3:
+                return Vector3.left;
+            default:
+                return Vector3.zero;
+        }
+    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -31,6 +75,7 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -41,33 +86,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void MoveRandomly()
-    {
-        cooldown += 1 * Time.deltaTime;
-        if (cooldown >= 1) 
-        {
-            rutine = Random.Range(0, 2);
-            cooldown = 0;
-        }
-        switch (rutine)
-        {
-            case 0:
-                break;
-
-            case 1:
-                angle = Random.Range(0, 360);
-                rotation = Quaternion.Euler(0, angle, 0);
-                rutine++;
-                break;
-
-            case 2:
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                break;
-        }
-    }
-
+ 
     void Die()
     {
         ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
