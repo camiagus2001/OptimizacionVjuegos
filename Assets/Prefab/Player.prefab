@@ -528,12 +528,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af0969d97bd025438f1771c27d18ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
-  Speed: 2
-  TurnSpeed: 180
+  speed: 2
+  turnSpeed: 180
+  maxHealth: 100
+  currentHealth: 0
   cantProyectiles: 10
   cantidadTotalProyectiles: 10
   bulletPrefab: {fileID: 1287712949026907226, guid: 703cac7b29d6f3d478a7307ffa881ef3, type: 3}
+  spawnBullet: {fileID: 1013938984935817994}
+  respawnPoint: {fileID: 0}
 --- !u!1 &8256735530480343893
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,6 +106,7 @@ public class Enemy : CustomUpdater
             explosion.transform.parent = null;
             explosion.Play(); 
         }
+        UpdateManagerGameplay.Instance.Remove(this);
         Destroy(gameObject);
     }
 }
