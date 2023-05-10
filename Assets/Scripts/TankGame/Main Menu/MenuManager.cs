@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     public void HomeButton()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
     public void TutorialButton()
     {
@@ -20,7 +21,5 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Se cerro el juego");
         Application.Quit();
-    }
-    
-
+    }    
 }

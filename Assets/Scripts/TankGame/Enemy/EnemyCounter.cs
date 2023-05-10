@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCounter : MonoBehaviour
 {
     public int totalEnemies;
+    public GameObject popUp;  
     public static EnemyCounter Instance { get; private set; }
 
     private void Awake()
@@ -18,10 +19,15 @@ public class EnemyCounter : MonoBehaviour
             Instance = this;
         }
     }
-
     public void EnemyDie()
     {
         totalEnemies--;
+
+        if(totalEnemies == 0)
+        {
+            popUp.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
   

@@ -19,18 +19,15 @@ public class Enemy : CustomUpdater
     private Rigidbody rb;
     private float currentShootCooldown;
 
-
-
     void Start()
     {
         UpdateManagerGameplay.Instance.Add(this);
         rb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
-        GameObject projectilePool = GameObject.Find("ProyectilePool");
+        GameObject projectilePool = GameObject.Find("BulletEnemyPool");
         projectilePoolReference = projectilePool.GetComponent<ObjectPool>();
         GameObject enemyPool = GameObject.Find("EnemyPool");
         enemyPoolReference = enemyPool.GetComponent<ObjectPool>();
-
     }
 
     public override void Tick()
@@ -52,14 +49,9 @@ public class Enemy : CustomUpdater
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Die();    
-        }
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
             Die();
-        }
+        }                 
     }
-
     private void Move()
     {
         cooldown -= Time.deltaTime;
@@ -108,15 +100,9 @@ public class Enemy : CustomUpdater
             currentShootCooldown = shootCooldown;
         }
     }
-
     void Die()
     {
-        ParticleSystem explosion = GetComponentInChildren<ParticleSystem>();
-        if (explosion != null)
-        {
-            explosion.transform.parent = null;
-            explosion.Play(); 
-        }
+      
         EnemyCounter.Instance.EnemyDie();
         rb.velocity = Vector3.zero;
         enemyPoolReference.ReturnToPool(gameObject);

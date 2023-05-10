@@ -17,7 +17,6 @@ public class ObjectPool : MonoBehaviour
             obj.SetActive(false);
             pooledObjects.Enqueue(obj);
         }
-
     }
 
     public GameObject GetPooledObject()
@@ -36,9 +35,7 @@ public class ObjectPool : MonoBehaviour
             pooledObjects.Enqueue(poolObject);
             return poolObject;
         }
-
     }
-
 
     public void ReturnToPool(GameObject poolObject)
     {
